@@ -1,0 +1,27 @@
+<h1>Listing tests</h1>
+
+<table>
+  <tr>
+    <th>Param1</th>
+    <th>Param2</th>
+    <th>Param3</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tests.each do |test| %>
+  <tr>
+    <td><%= test.param1 %></td>
+    <td><%= test.param2 %></td>
+    <td><%= test.param3 %></td>
+    <td><%= link_to 'Show', test %></td>
+    <td><%= link_to 'Edit', edit_test_path(test) %></td>
+    <td><%= link_to 'Destroy', test, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Test', new_test_path %>

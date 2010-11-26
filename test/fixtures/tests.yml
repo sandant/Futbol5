@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  param1: MyString
+  param2: 1
+  param3: 2010-11-25
+
+two:
+  param1: MyString
+  param2: 1
+  param3: 2010-11-25

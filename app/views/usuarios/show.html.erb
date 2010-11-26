@@ -1,0 +1,9 @@
+Formulario<br /><br />
+<% semantic_form_for @usuario do |f| %>
+  <% f.inputs do %>
+    <%= f.input :nombre, :label => 'Nombre' %>
+    <%= f.input :apellido, :label => 'Apellido' %>
+    <%= f.input :edad, :label => 'Edad' %>
+  <% end %>
+  <%= f.commit_button %>
+<% end %>
