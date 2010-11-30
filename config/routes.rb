@@ -1,4 +1,6 @@
 Futbol5::Application.routes.draw do  
+  get "comments/index"
+
   resources :usuarios
 
   # The priority is based upon order of creation:

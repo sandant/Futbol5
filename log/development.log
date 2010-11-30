@@ -66,3 +66,312 @@ Started GET "/usuarios/23/ejemplo" for 127.0.0.1 at 2010-11-29 11:45:58 -0800
   Parameters: {"id"=>"23"}
 Rendered usuarios/ejemplo.html.erb within layouts/application (15.6ms)
 Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "usuarios" ("apellido", "created_at", "edad", "nombre", "updated_at") VALUES ('Doldan', '2010-11-29 23:03:44.078125', 21, 'Santiago', '2010-11-29 23:03:44.078125')
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."nombre" = 'Santiago') LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."edad" = 23) LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."nombre" = 'dsdsdsds') LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" ORDER BY usuarios.id DESC LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[36mSQL (31.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE (edad > 10)[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE (edad > 22)
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE (edad > 21)[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE (edad > 20)
+  [1m[36mSQL (31.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20101125191542)
+Migrating to CreateComments (20101130002659)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101130002659')
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (15.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("tests")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("usuarios")
+  [1m[36mSQL (46.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20101125191542)
+Migrating to CreateComments (20101130002659)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("tests")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("usuarios")
+  [1m[36mSQL (46.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20101125191542)
+Migrating to CreateComments (20101130002659)
+Migrating to AlterTableComments (20101130005537)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (46.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (15.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20101125191542)
+Migrating to CreateComments (20101130002659)
+Migrating to AlterTableComments (20101130005537)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1mALTER TABLE "comments" ADD "usuario_id" integer[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101130005537')
+  [1m[36mSQL (15.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("tests")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("usuarios")
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "usuario_id") VALUES ('2010-11-30 01:10:07.343750', '2010-11-30 01:10:07.343750', 1)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[36mSQL (31.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+  [1m[36mSQL (46.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "usuario_id" integer) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mDROP TABLE "comments"[0m
+  [1m[35mSQL (0.0ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_comments")[0m
+  [1m[35mSQL (0.0ms)[0m  DROP TABLE "altered_comments"
+  [1m[36mSQL (31.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20101130005537'[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("comments")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("tests")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("usuarios")[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.0ms)[0m  ALTER TABLE "comments" ADD "usuario_id" integer
+  [1m[36mSQL (0.0ms)[0m  [1mALTER TABLE "comments" ADD "message" text[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101130005537')
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("tests")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("usuarios")
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "comments" SET "message" = 'Mensaje del primero comentario', "updated_at" = '2010-11-30 01:28:06.078125' WHERE ("comments"."id" = 1)[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "comments" ("created_at", "message", "updated_at", "usuario_id") VALUES ('2010-11-30 01:30:22.406250', 'Mensaje numero 2', '2010-11-30 01:30:22.406250', 1)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "comments" ("created_at", "message", "updated_at", "usuario_id") VALUES ('2010-11-30 01:31:53.703125', 'Mensaje numero 3', '2010-11-30 01:31:53.703125', 1)
+  [1m[36mSQL (31.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".usuario_id = 1)) AS subquery[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1
+  [1m[36mUsuario Load (15.6ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".usuario_id = 1)) AS subquery
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "comments" SET "updated_at" = '2010-11-30 01:34:53.953125', "usuario_id" = 1 WHERE ("comments"."id" = 1)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".usuario_id = 1)) AS subquery[0m
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-29 17:49:44 -0800
+
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  app/controllers/usuarios_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2010-11-29 17:49:52 -0800
+
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  app/controllers/usuarios_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2010-11-29 17:50:45 -0800
+
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  app/controllers/usuarios_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-29 17:50:50 -0800
+
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  app/controllers/usuarios_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-29 17:55:23 -0800
+
+AbstractController::ActionNotFound (The action 'home' could not be found for UsuariosController):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2010-11-29 17:55:32 -0800
+  Processing by UsuariosController#index as HTML
+  [1m[36mSQL (46.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+Rendered usuarios/index.html.erb within layouts/application (281.2ms)
+Completed 200 OK in 1141ms (Views: 312.5ms | ActiveRecord: 46.9ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2010-11-29 17:55:57 -0800
+  Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (15.6ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+Rendered usuarios/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 141ms (Views: 93.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2010-11-29 17:56:06 -0800
+  Processing by UsuariosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_usuarios_new_html_erb__26927270_16234536_855781836 at C:/DOCUME~1/admin/Desktop/Futbol5/app/views/usuarios/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_usuarios_new_html_erb__26927270_16234536_855781836 at C:/DOCUME~1/admin/Desktop/Futbol5/app/views/usuarios/new.html.erb:2)
+Rendered usuarios/new.html.erb within layouts/application (93.8ms)
+Completed 200 OK in 172ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2010-11-29 17:56:19 -0800
+  Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gDoz1z1QGUyKM+zOblmdUu+YTIz69kBR+gXlHuPqPfc=", "usuario"=>{"nombre"=>"Jorge", "apellido"=>"Muldo", "edad"=>"34"}, "commit"=>"Create Usuario"}
+Completed   in 62ms
+
+NoMethodError (undefined method `save?' for #<Usuario:0x1f784b8>):
+  app/controllers/usuarios_controller.rb:13:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2010-11-29 17:56:26 -0800
+  Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)[0m
+Rendered usuarios/index.html.erb within layouts/application (203.1ms)
+Completed 200 OK in 281ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2010-11-29 18:01:27 -0800
+  Processing by UsuariosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_usuarios_new_html_erb__26927270_16143816_855781836 at C:/DOCUME~1/admin/Desktop/Futbol5/app/views/usuarios/new.html.erb:3)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_usuarios_new_html_erb__26927270_16143816_855781836 at C:/DOCUME~1/admin/Desktop/Futbol5/app/views/usuarios/new.html.erb:2)
+Rendered usuarios/new.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 172ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2010-11-29 18:01:34 -0800
+  Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gDoz1z1QGUyKM+zOblmdUu+YTIz69kBR+gXlHuPqPfc=", "usuario"=>{"nombre"=>"Jorge", "apellido"=>"Muldo", "edad"=>"34"}, "commit"=>"Create Usuario"}
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "usuarios" ("apellido", "created_at", "edad", "nombre", "updated_at") VALUES ('Muldo', '2010-11-30 02:01:35.093750', 34, 'Jorge', '2010-11-30 02:01:35.093750')
+Rendered usuarios/test.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 203ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2010-11-29 18:01:39 -0800
+  Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 1)
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".usuario_id = 2)[0m
+Rendered usuarios/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 94ms (Views: 78.1ms | ActiveRecord: 0.0ms)

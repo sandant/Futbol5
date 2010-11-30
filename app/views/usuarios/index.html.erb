@@ -1,4 +1,8 @@
 Datos Usuario<br /><br />
 <% @usuarios.each do |u| %>
-<%= u.nombre %><br />
+<b>Usuario: </b><%= u.nombre %><br />
+<% u.comments.each do |c| %>
+<b>Mensaje: </b><%= c.message %><br />
+<% end %>
+<br /><br />
 <% end %>

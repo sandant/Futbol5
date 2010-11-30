@@ -10,7 +10,7 @@ class UsuariosController < ApplicationController
   
   def create 
 	@usuario = Usuario.new(params[:usuario])
-	unless @usuario.save?
+	unless @usuario.save
 	  render :action => "new"
 	else	
 	  flash[:message] = "No se guardo el nuevo usuario!"
