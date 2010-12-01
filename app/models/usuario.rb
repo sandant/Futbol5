@@ -1,5 +1,6 @@
 class Usuario < ActiveRecord::Base
   has_many :comments 
+  has_one :post
   
   # we can make custom queries and then call them like a function of the model
   scope :mayores, lambda {|edad| where(["edad > ?", edad])}

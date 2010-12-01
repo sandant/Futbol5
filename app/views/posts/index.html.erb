@@ -1,0 +1,6 @@
+<b>All the posts:</b><br />
+<% @posts.each do |p| %>
+  <%= link_to p.title, :controller => "posts", :action => "show", :id => p.id %><br />
+<% end %>
+<br /><br />
+<%= link_to "Index", :controller => "mains", :action => "index" %>

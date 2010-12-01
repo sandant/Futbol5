@@ -32,7 +32,7 @@ form.formtastic ul.errors li { padding:0; border:none; display:list-item; }
 --------------------------------------------------------------------------------------------------*/
 form.formtastic fieldset { overflow:auto; } /* clearing contained floats */
 form.formtastic fieldset.inputs { }
-form.formtastic fieldset.buttons { padding-left:25%; }
+/*form.formtastic fieldset.buttons { padding-left:25%; }*/
 form.formtastic fieldset ol { }
 form.formtastic fieldset.buttons li { float:left; padding-right:0.5em; }
 
@@ -48,7 +48,7 @@ form.formtastic fieldset > ol > li.error { }
 
 /* LABELS
 --------------------------------------------------------------------------------------------------*/
-form.formtastic fieldset > ol > li label { display:block; width:25%; float:left; padding-top:.2em; }
+form.formtastic fieldset > ol > li label { display:block; width:70px; float:left; padding-top:.2em; text-align: right;}
 form.formtastic fieldset > ol > li > li label { line-height:100%; padding-top:0; }
 form.formtastic fieldset > ol > li > li label input { line-height:100%; vertical-align:middle; margin-top:-0.1em;}
 
@@ -70,7 +70,7 @@ form.formtastic fieldset > ol > li p.inline-hints { color:#666; margin:0.5em 0 0
 
 /* INLINE ERRORS
 --------------------------------------------------------------------------------------------------*/
-form.formtastic fieldset > ol > li p.inline-errors { color:#cc0000; margin:0.5em 0 0 25%; }
+form.formtastic fieldset > ol > li p.inline-errors { color:#cc0000; margin:0.5em 0 0 75px; }
 form.formtastic fieldset > ol > li ul.errors { color:#cc0000; margin:0.5em 0 0 25%; list-style:square; }
 form.formtastic fieldset > ol > li ul.errors li { padding:0; border:none; display:list-item; }
 
@@ -84,7 +84,7 @@ form.formtastic fieldset > ol > li.numeric input { max-width:74%; }
 
 /* TEXTAREA OVERRIDES
 --------------------------------------------------------------------------------------------------*/
-form.formtastic fieldset > ol > li.text textarea { width:74%; }
+form.formtastic fieldset > ol > li.text textarea { width:400px; }
 
 
 /* HIDDEN OVERRIDES

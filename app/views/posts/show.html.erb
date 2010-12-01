@@ -1,0 +1,27 @@
+<b>Title: </b><%= @post.title %><br />
+<b>Created by: </b><%= @post.usuario.nombre+" "+@post.usuario.apellido  %> <b>Created at: </b><%= @post.usuario.created_at  %><br /><br />
+<b>Info: </b><%= @post.content %><br /><br /><br />
+<b>Comments: <%= @post.comments.size %></b><br />
+<% @post.comments.each do |c| %>
+  <b><%= c.usuario.nombre %>:</b><br />
+  <%= c.message %><br /><br /> 
+<% end %>  
+
+<br /><br /> 
+<% unless flash[:message].nil? %>
+<b style="color:#CC0000"><%= flash[:message] %></b><br />
+<% end %>
+<b>New Comment:</b><br />
+<% semantic_form_for @newComment do |nc| %>
+  <% nc.inputs do %>
+    <%= nc.input :post_id, :as => :hidden, :value => @post.id %>
+    <%= nc.input :usuario_id, :as => :numeric, :label => 'Id: ' %>
+    <%= nc.input :message, :label => 'Message: ' %>
+  <% end %>
+  <%= nc.commit_button %>
+<% end %>
+<br />
+<%= link_to "All the post", :action => "index" %>
+<br />
+<%= link_to "Index", :controller => "mains", :action => "index" %>
+

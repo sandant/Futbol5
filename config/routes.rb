@@ -1,7 +1,11 @@
 Futbol5::Application.routes.draw do  
-  get "comments/index"
+  resources :posts
+
+  resources :comments
 
   resources :usuarios
+  
+  resources :mains
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -54,7 +58,7 @@ Futbol5::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-    root :to => "Usuarios#home"
+    root :to => "mains#index"
 
   # See how all your routes lay out with "rake routes"
 
