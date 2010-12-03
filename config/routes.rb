@@ -1,4 +1,6 @@
 Futbol5::Application.routes.draw do  
+  devise_for :usuarios
+
   resources :posts
 
   resources :comments
